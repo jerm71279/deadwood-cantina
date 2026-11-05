@@ -17,16 +17,19 @@ details.spoil{background:#2b1a0e;color:var(--paper);border:3px solid #b00;border
 details.spoil summary{cursor:pointer;font-weight:bold;font-size:1.15rem;color:#ffcf6b}
 .note{font-size:.9rem;font-style:italic}footer{color:var(--paper);text-align:center;font-size:.85rem;padding:20px}
 
-.pdf{width:100%;height:80vh;border:2px solid var(--gold);border-radius:4px;background:#fff}.btn{display:inline-block;background:var(--rust);color:var(--paper);padding:8px 14px;border-radius:6px;text-decoration:none;margin:4px 6px 4px 0}
+.btn{display:block;text-align:center;background:var(--rust);color:var(--paper)!important;font-size:1.35rem;padding:16px 18px;border-radius:10px;text-decoration:none;border:3px solid var(--gold);box-shadow:0 4px 0 #5a2510;margin:12px 0}
+.pdf{width:100%;height:85vh;border:2px solid var(--gold);border-radius:4px;background:#fff}
 .secret{text-align:center;font-family:'Rockwell','Courier New',serif;font-size:1.4rem;color:#ffcf6b;text-shadow:2px 2px 0 var(--rust)}
-@media print{body{background:#fff}header,.noprint,footer{display:none}.card{box-shadow:none}}</style></head><body><div class="wrap">
+@media screen{.printonly{display:none}}
+@media (max-width:700px){.pdf{display:none}}
+@media print{@page{size:letter;margin:0}.wrap>*:not(.printonly){display:none!important}.printonly img{width:100%;height:auto;display:block;page-break-after:always;break-after:page}body{background:#fff!important}.noprint,header img,footer{display:none!important}header{color:#000;padding:0}h1{text-shadow:none;color:#000}.card{box-shadow:none;border:1px solid #999}.secret{color:#000;text-shadow:none}}
+</style></head><body><div class="wrap">
 <header><h1>Murder at the Deadwood Cantina</h1><p>Your character envelope</p></header>
-<section class="card"><h2>Your role</h2><p style="font-size:1.6rem;margin:.2em 0"><b>Jesse Wales</b></p>
-<div class="grid"><div><b>When</b><br>Friday, Nov 13, 2026<br>6:30 PM CT</div><div><b>Where</b><br>8353 Spanish Fort Blvd<br>Spanish Fort, AL 36527</div><div><b>Bar</b><br>Soda bar only — sarsaparilla on the house</div></div></section>
-<section class="card"><h2>Character sheet</h2><p class="noprint"><a class="btn" href="sheet.pdf" target="_blank">Open / print character sheet (PDF)</a></p>
-<object class="pdf noprint" data="sheet.pdf" type="application/pdf"><p>Can’t show the PDF here — <a href="sheet.pdf">open it directly</a>.</p></object></section>
-<section class="card"><h2>Name tag</h2><p>Print on Avery 5163-style label paper (or plain paper and cut). One sheet has 8 copies.</p>
-<p class="noprint"><a class="btn" href="nametag.pdf" target="_blank">Open / print name tag (PDF)</a></p>
-<object class="pdf noprint" style="height:60vh" data="nametag.pdf" type="application/pdf"><p><a href="nametag.pdf">Open the name tag PDF</a>.</p></object></section>
+<section class="card"><h2>Your character</h2><p style="font-size:1.6rem;margin:.2em 0"><b>Jesse Wales</b></p>
+<div class="grid"><div><b>When</b><br>Friday, Nov 13, 2026<br>6:30 PM CT</div><div><b>Where</b><br>8353 Spanish Fort Blvd<br>Spanish Fort, AL 36527</div><div><b>Bar</b><br>Soda bar only</div></div>
+<a class="btn noprint" href="packet.pdf" target="_blank" rel="noopener">🖨️ Print my character packet</a>
+<p class="note">Your packet (letter size): page 1 your character card, page 2 your starting objectives, page 3 your character sheet. On a phone, tap the button, then use Share → Print. Your name tag will be handed out at the party.</p></section>
+<section class="card noprint"><h2>Preview</h2><object class="pdf" data="packet.pdf" type="application/pdf"><p><a href="packet.pdf">Open your character packet (PDF)</a></p></object></section>
+<div class="printonly"><img src="p1.png" alt="Packet page 1"><img src="p2.png" alt="Packet page 2"><img src="p3.png" alt="Packet page 3"></div>
 <p class="secret">Keep your secrets secret!</p>
 <footer>Don’t share this link — it’s just for you.</footer></div></body></html>
